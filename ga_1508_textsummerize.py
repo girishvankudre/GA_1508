@@ -64,7 +64,22 @@ class FindSummary:
         summaryText = ' '.join(summaryTextList)
         return summaryText
     
-if __name__=="__main__":
-    summaryObj = FindSummary('../GA_1508/config')
-    summaryText = summaryObj.summarise()
-    
+    def summarise_post(self,article):
+        
+        articleText = article
+        preprocessObj = PreprocessText()
+        loweredText = preprocessObj.convertToLower(articleText)
+        filteredText = preprocessObj.removeSpecialChar(loweredText)
+        sentences = self.splitSentence(filteredText)
+        text1,remainingText = self.groupSentence(sentences)
+        sentLengths = self.findSentLen(remainingText)
+        top5Sents = self.findTopFive(remainingText,sentLengths)
+        summaryTextList = [text1]
+        summaryTextList.extend(top5Sents)
+        summaryText = ' '.join(summaryTextList)
+        return summaryText
+
+#if __name__=="__main__":
+#    summaryObj = FindSummary('../GA_1508/config')
+#    summaryText = summaryObj.summarise()
+#    print (summaryText)
