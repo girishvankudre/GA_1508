@@ -26,9 +26,9 @@ class PreprocessText:
         processedText = re.sub(',|;|<|>|','',text)
         return processedText
 
-if __name__=="__main__":
-    preprocessObj = PreprocessText()
-    text = "Jamaican Foreign Minister Kamina Smith had wished Ms. Harris on her “historic selection” in a tweet."
-    loweredText = preprocessObj.convertToLower(text)
-    filteredText = preprocessObj.removeSpecialChar(loweredText)
-    print('filtered text: {}'.format(filteredText))
+#if __name__=="__main__":
+#    preprocessObj = PreprocessText()
+#    text = "Jamaican Foreign Minister Kamina Smith had wished Ms. Harris on her “historic selection” in a tweet."
+#    loweredText = preprocessObj.convertToLower(text)
+#    filteredText = preprocessObj.removeSpecialChar(loweredText)
+#    print('filtered text: {}'.format(filteredText))
