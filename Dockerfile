@@ -1,0 +1,1 @@
+FROM ubuntuRUN apt-get -y updateRUN apt-get -y install nanoRUN apt-get -y install python3RUN apt-get -y install python3-pip#RUN pip3 install numpy#RUN pip3 install flaskRUN mkdir -p /opt/ga1508COPY req.txt /opt/ga1508#COPY addarray.py /opt/myprojectsWORKDIR /opt/ga1508CMD ["python3","apiservice.py"]
