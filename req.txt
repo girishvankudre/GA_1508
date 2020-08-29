@@ -1,0 +1,4 @@
+Class
+nltk
+numpy
+flask
